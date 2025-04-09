@@ -71,7 +71,7 @@ public class Monkey extends RescueAnimal{
     //Only allows specefic species
     public void setSpecies(String species) {
         String[] allowedSpecies = {"Capuchin", "Guenon", "Macaque", "Marmoset", "Squirrel monkey", "Tamarin"};
-    boolean isValid = false;
+    boolean isValid = false; //To set to true if species = allowed species
     for(String allowed : allowedSpecies) {
         if (species.equalsIgnoreCase(allowed)) {
             isValid = true;

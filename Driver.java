@@ -1,3 +1,4 @@
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -92,6 +93,24 @@ public class Driver {
     public static void intakeNewDog(Scanner scanner) {
         System.out.println("What is the dog's name?");
         String name = scanner.nextLine();
+        System.out.println("What is the dog's breed?");
+        String breed = scanner.nextLine();
+        System.out.println("What is the dog's gender?");
+        String gender = scanner.nextLine();
+        System.out.println("What is the dog's age?");
+        String age = scanner.nextLine();
+        System.out.println("What is the dog's weight?");
+        String weight = scanner.nextLine();
+        System.out.println("What is the dog's acquisitionDate?");
+        String acquisitionDate = scanner.nextLine();
+        System.out.println("What is the dog's acquisitionCountry?");
+        String acquisitionCountry = scanner.nextLine();
+        System.out.println("What is the dog's trainingStatus?");
+        String trainingStatus = scanner.nextLine();
+        System.out.println("What is the dog's reserve status?");
+        boolean reserved = scanner.nextBoolean();
+        System.out.println("What is the dog's inServiceCountry?");
+        String inServiceCountry = scanner.nextLine();
         for(Dog dog: dogList) {
             if(dog.getName().equalsIgnoreCase(name)) {
                 System.out.println("\n\nThis dog is already in our system\n\n");
@@ -100,6 +119,8 @@ public class Driver {
         }
 
         // Add the code to instantiate a new dog and add it to the appropriate list
+        Dog newDog = new Dog(name, breed, gender, age, weight, acquisitionDate, acquisitionCountry, trainingStatus, reserved, inServiceCountry);
+        dogList.add(newDog);
     }
 
 
@@ -107,8 +128,48 @@ public class Driver {
 	//Instantiate and add the new monkey to the appropriate list
         // For the project submission you must also  validate the input
 	// to make sure the monkey doesn't already exist and the species type is allowed
+
+
         public static void intakeNewMonkey(Scanner scanner) {
-            System.out.println("The method intakeNewMonkey needs to be implemented");
+            System.out.println("What is the monkey's name?");
+            String name = scanner.nextLine();
+            System.out.println("What is the monkey's gender?");
+            String gender = scanner.nextLine();
+            System.out.println("What is the monkey's age?");
+            String age = scanner.nextLine();
+            System.out.println("What is the monkey's weight?");
+            String weight = scanner.nextLine();
+            System.out.println("What is the monkey's acquisitionDate?");
+            String acquisitionDate = scanner.nextLine();
+            System.out.println("What is the monkey's acquisitionCountry?");
+            String acquisitionCountry = scanner.nextLine();
+            System.out.println("What is the monkey's trainingStatus?");
+            String trainingStatus = scanner.nextLine();
+            System.out.println("is the monkey's reserved?");
+            boolean reserved = scanner.nextBoolean();
+            System.out.println("What is the monkey's inServiceCountry?");
+            String inServiceCountry = scanner.nextLine();
+            System.out.println("What is the monkey's tailLength?");
+            String tailLength = scanner.nextLine();
+            System.out.println("What is the monkey's height?");
+            String height = scanner.nextLine();
+            System.out.println("What is the monkey's bodyLength?");
+            String bodyLength = scanner.nextLine();
+            System.out.println("What is the monkey's species?");
+            String species = scanner.nextLine();
+
+            //makes sure the monkey doesn't already exist
+            for (Monkey monkey: monkeyList) {
+                if (monkey.getName().equalsIgnoreCase(name)) {
+                    System.out.println("\n\nThis monkey is already in our system\n\n");
+                return;
+                }
+            }
+
+            //Adds new monkey object to the array list
+            Monkey newMonkey = new Monkey(name, gender, age, weight, acquisitionDate, acquisitionCountry, trainingStatus, reserved, inServiceCountry, tailLength, height, bodyLength, species);
+
+            monkeyList.add(newMonkey);
         }
 
         // Complete reserveAnimal
