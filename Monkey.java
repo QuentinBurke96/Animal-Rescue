@@ -13,7 +13,6 @@ public class Monkey extends RescueAnimal{
 	String trainingStatus, boolean reserved, String inServiceCountry,
     String tailLength, String height, String bodyLength, String species) {
         setName(name);
-        //setBreed(breed);
         setGender(gender);
         setAge(age);
         setWeight(weight);
@@ -69,7 +68,20 @@ public class Monkey extends RescueAnimal{
         this.bodyLength = bodyLength;
     }
 
+    //Only allows specefic species
     public void setSpecies(String species) {
+        String[] allowedSpecies = {"Capuchin", "Guenon", "Macaque", "Marmoset", "Squirrel monkey", "Tamarin"};
+    boolean isValid = false;
+    for(String allowed : allowedSpecies) {
+        if (species.equalsIgnoreCase(allowed)) {
+            isValid = true;
+            break;
+        }
+    }
+    if (isValid) {
         this.species = species;
+    } else {
+        System.out.println("Invalid species");
+    }
     }
 }
