@@ -6,15 +6,30 @@ public class Driver {
     // Instance variables (if needed)
 
     public static void main(String[] args) {
-
+        Scanner scnr = new Scanner(System.in);
+        String selection = "";
+        
 
         initializeDogList();
         initializeMonkeyList();
 
-        for (int i = 0; i < 10; i++) {
-            displayMenu();
-            
+        while (!selection.equalsIgnoreCase("q")) {
+            displayMenu(); //displays menu in terminal
+            selection = scnr.next();
+            //Allows you to make a selection
+            switch (selection.toLowerCase()) {
+                case "1" -> System.out.println("You selected: Intake a new dog");
+                case "2" -> System.out.println("You selected: Intake a new monkey");
+                case "3" -> System.out.println("You selected: Reserve an animal");
+                case "4" -> System.out.println("You selected: Print a list of all dogs");
+                case "5" -> System.out.println("You selected: Print a list of all monkeys");
+                case "6" -> System.out.println("You selected: Print a list of all animals that are not reserved");
+                case "q" -> System.out.println("Exiting application.");
+                default -> System.out.println("Invalid selection. Please try again.");
+            }
         }
+
+        
 
         // Add a loop that displays the menu, accepts the users input
         // and takes the appropriate action.
