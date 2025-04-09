@@ -8,7 +8,7 @@ public class Monkey extends RescueAnimal{
 
 
     // Constructor
-    public Monkey(String name, String breed, String gender, String age,
+    public Monkey(String name, String gender, String age,
     String weight, String acquisitionDate, String acquisitionCountry,
 	String trainingStatus, boolean reserved, String inServiceCountry,
     String tailLength, String height, String bodyLength, String species) {
@@ -30,6 +30,10 @@ public class Monkey extends RescueAnimal{
     }
 
     // Accessor Method
+    // public String getBreed() {
+    //     return breed;
+    // }
+
     public String getTailLength() {
         return tailLength;
     }
@@ -49,6 +53,10 @@ public class Monkey extends RescueAnimal{
 
 
     // Mutator Method
+    // public void setBreed(String breed) {
+    //     this.breed = breed;
+    // }
+
     public void settailLength(String tailLength) {
         this.tailLength = tailLength;
     }

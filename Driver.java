@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Driver {
     private static ArrayList<Dog> dogList = new ArrayList<>();
+    private static ArrayList<Monkey> monkeyList = new ArrayList<>();
     // Instance variables (if needed)
 
     public static void main(String[] args) {
@@ -73,6 +74,14 @@ public class Driver {
     // Adds monkeys to a list for testing
     //Optional for testing
     public static void initializeMonkeyList() {
+        Monkey monkey1 = new Monkey("Lily", "Female", "3", "25.6", "05-12-2019", "United States", "intake", false, "United States", "5", "20", "3", "Capuchin");
+        Monkey monkey2 = new Monkey("Phil", "Male", "5", "27.1", "05-12-2019", "United States", "intake", false, "United States", "5", "20", "3", "Guenon");
+        Monkey monkey3 = new Monkey("Anna", "Female", "2", "21.5", "05-12-2019", "United States", "intake", false, "United States", "5", "20", "3", "Tamarin");
+        
+
+        monkeyList.add(monkey1);
+        monkeyList.add(monkey2);
+        monkeyList.add(monkey3);
 
     }
 
