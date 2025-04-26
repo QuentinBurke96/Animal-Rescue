@@ -121,4 +121,10 @@ public class RescueAnimal {
 	public void setTrainingStatus(String trainingStatus) {
 		this.trainingStatus = trainingStatus;
 	}
+
+
+	//Prints the animal's name and age, without a newline.
+	public void printAll() {
+        System.out.print("Name: " + getName() + ", Age: " + getAge());
+    }
 }
